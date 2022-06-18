@@ -35,7 +35,7 @@ public class DivinationFrame extends JFrame {
 		createButton();
 		createLabel();
 		createLayout();
-		setTitle("§Tø˙™k©ˆ∏g§R∫‚-∫‚®ˆ");
+		setTitle("‰∏âÈå¢Ê≥ïÊòìÁ∂ìÂçúÁÆó-ÁÆóÂç¶");
 	}
 
 	private void createTextField() {
@@ -68,7 +68,7 @@ public class DivinationFrame extends JFrame {
 		tf31.setHorizontalAlignment(SwingConstants.CENTER);
 		tf31.setFont(new Font("Arial", Font.BOLD, 20));
 		tf31.setBounds(441, 284, 40, 37);
-//√ˆ©Û¶b™≈ÆÊ§§¥£®—πw≥]≠»¨Oß_Ø‡¥£∞™©ˆ©Û≤z∏—µ{´◊§Œ®œ•Œ´KßQ°A∏’•Œ™Ã¨›™k®‚∑•°A¨G¶π≥°§¿µ{¶°ΩX•Hµ˘∏—§Ë¶°´OØd		
+//ÈóúÊñºÂú®Á©∫Ê†º‰∏≠Êèê‰æõÈ†êË®≠ÂÄºÊòØÂê¶ËÉΩÊèêÈ´òÊòìÊñºÁêÜËß£Á®ãÂ∫¶Âèä‰ΩøÁî®‰æøÂà©ÔºåË©¶Áî®ËÄÖÁúãÊ≥ïÂÖ©Ê•µÔºåÊïÖÊ≠§ÈÉ®ÂàÜÁ®ãÂºèÁ¢º‰ª•Ë®ªËß£ÊñπÂºè‰øùÁïô		
 //		tf10.setText("1");
 //		tf11.setText("2");
 //		tf20.setText("3");
@@ -81,16 +81,16 @@ public class DivinationFrame extends JFrame {
 	private void createButton() {
 		btnA = new JButton("\u6309\u6B64\u751F\u6210\u65B0\u723B (0/6)");
 		btnA.setBackground(new Color(245, 222, 179));
-		btnA.setFont(new Font("º–∑¢≈È", Font.BOLD, 24));
+		btnA.setFont(new Font("Ê®ôÊ•∑È´î", Font.BOLD, 24));
 
-		restartBtn = new JButton("≠´∑s¶A®”");
-		restartBtn.setFont(new Font("º–∑¢≈È", Font.BOLD, 24));
+		restartBtn = new JButton("ÈáçÊñ∞ÂÜç‰æÜ");
+		restartBtn.setFont(new Font("Ê®ôÊ•∑È´î", Font.BOLD, 24));
 		restartBtn.setBackground(new Color(245, 222, 179));
 
 		btnA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
 				numClicks++;
-				btnA.setText(String.format("´ˆ¶π•Õ¶®∑s§¯ (%s/6)", numClicks));
+				btnA.setText(String.format("ÊåâÊ≠§ÁîüÊàêÊñ∞Áàª (%s/6)", numClicks));
 				boolean tf1 = false, tf2 = false, tf3 = false;
 				int c1, c2, c3;
 				int sum1 = Integer.parseInt(tf10.getText()) + Integer.parseInt(tf11.getText());
@@ -98,7 +98,7 @@ public class DivinationFrame extends JFrame {
 				int sum3 = Integer.parseInt(tf30.getText()) + Integer.parseInt(tf31.getText());
 
 				if (sum1 % 2 == 0 || sum2 % 2 == 0 || sum3 % 2 == 0) {
-					JOptionPane.showMessageDialog(panel2, "•ø≠±ªP§œ≠±§£•i¶P¨∞©_(∞∏)º∆", "Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(panel2, "Ê≠£Èù¢ËàáÂèçÈù¢‰∏çÂèØÂêåÁÇ∫Â•á(ÂÅ∂)Êï∏", "Error", JOptionPane.ERROR_MESSAGE);
 					restartBtn.doClick();
 				}
 				if (Math.random() >= 0.5) {
@@ -191,7 +191,7 @@ public class DivinationFrame extends JFrame {
 				
 				position = "";
 				numClicks = 0;
-				btnA.setText(String.format("´ˆ¶π•Õ¶®∑s§¯ (%s/6)", numClicks));
+				btnA.setText(String.format("ÊåâÊ≠§ÁîüÊàêÊñ∞Áàª (%s/6)", numClicks));
 			}
 		});
 	}
@@ -211,15 +211,12 @@ public class DivinationFrame extends JFrame {
 		la31.setIcon(new ImageIcon("images//coin2Back.png"));
 
 		coin1 = new JLabel();
-//		coin1.setIcon(new ImageIcon("C:\\eclipse-workspace\\1102FinalProject\\src\\coin2small.png"));
 		coin1.setHorizontalAlignment(SwingConstants.CENTER);
 
 		coin2 = new JLabel();
-//		coin2.setIcon(new ImageIcon("C:\\eclipse-workspace\\1102FinalProject\\src\\coin2small.png"));
 		coin2.setHorizontalAlignment(SwingConstants.CENTER);
 
 		coin3 = new JLabel();
-//		coin3.setIcon(new ImageIcon("C:\\eclipse-workspace\\1102FinalProject\\src\\coin2small.png"));
 		coin3.setHorizontalAlignment(SwingConstants.CENTER);
 	}
 
