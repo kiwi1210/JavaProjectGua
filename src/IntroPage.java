@@ -40,11 +40,11 @@ public class IntroPage extends JFrame {
 		creatRButton();
 		creatLayout();
 		
-		String server = "jdbc:mysql://140.119.19.73:3315/";
+		String server = "yourServer";
 		String database = "tuegroup13"; // change to your own database
 		String url = server + database + "?useSSL=false";
-		String username = "tuegroup13"; // change to your own username
-		String password = "dvj4585"; // change to your own password
+		String username = "yourUsername"; // change to your own username
+		String password = "yourPassword"; // change to your own password
 		Connection conn;
 
 		try {
@@ -79,7 +79,7 @@ public class IntroPage extends JFrame {
 		comment = new JButton("\u8A55\u8AD6");
 		howBtn = new JButton("\u64CD\u4F5C\u8AAA\u660E");
 
-		howBtn.setFont(new Font("º–∑¢≈È", Font.PLAIN, 20));
+		howBtn.setFont(new Font("Â§πÂèëÁ†∞", Font.PLAIN, 20));
 		howBtn.setBackground(new Color(241,220,182));
 		howBtn.setBounds(730, 296, 124, 50);
 		getContentPane().add(howBtn);
@@ -93,7 +93,7 @@ public class IntroPage extends JFrame {
 			}
 		});
 
-		start.setFont(new Font("º–∑¢≈È", Font.BOLD, 24));
+		start.setFont(new Font("Â§πÂèëÁ†∞", Font.BOLD, 24));
 		start.setBackground(new Color(245, 222, 179));
 		start.setBounds(649, 394, 287, 69);
 		start.addActionListener(new ActionListener() {
@@ -106,7 +106,7 @@ public class IntroPage extends JFrame {
 				} else if (rbtWork.isSelected()) {
 					choised = "Career";
 				} else {
-					JOptionPane.showMessageDialog(panel, "Ω–øÔæ‹√˛ßO", "Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(panel, "Âè´Âå°ÊãíÊë∏Óúï", "Error", JOptionPane.ERROR_MESSAGE);
 
 				}
 
@@ -121,7 +121,7 @@ public class IntroPage extends JFrame {
 			}
 		});
 		
-		comment.setFont(new Font("º–∑¢≈È", Font.PLAIN, 20));
+		comment.setFont(new Font("Â§πÂèëÁ†∞", Font.PLAIN, 20));
 		comment.setBackground(new Color(245, 222, 179));
 		comment.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
@@ -140,10 +140,10 @@ public class IntroPage extends JFrame {
 		
 		rbtLove.setBackground(new Color(241, 220, 182));
 		rbtLove.setHorizontalAlignment(SwingConstants.CENTER);
-		rbtLove.setFont(new Font("º–∑¢≈È", Font.PLAIN, 24));
+		rbtLove.setFont(new Font("Â§πÂèëÁ†∞", Font.PLAIN, 24));
 		rbtLove.setBounds(177, 414, 75, 31);
 		
-		rbtWork.setFont(new Font("º–∑¢≈È", Font.PLAIN, 24));
+		rbtWork.setFont(new Font("Â§πÂèëÁ†∞", Font.PLAIN, 24));
 		rbtWork.setBackground(new Color(241, 220, 182));
 		rbtWork.setHorizontalAlignment(SwingConstants.CENTER);
 		rbtWork.setBounds(402, 414, 75, 31);
@@ -164,11 +164,11 @@ public class IntroPage extends JFrame {
 		});
 	}
 	public void creatLayout() {
-		String server = "jdbc:mysql://140.119.19.73:3315/";
+		String server = "yourServer";
 		String database = "tuegroup13"; // change to your own database
 		String url = server + database + "?useSSL=false";
-		String username = "tuegroup13"; // change to your own username
-		String password = "dvj4585"; // change to your own password
+		String username = "yourUsername"; // change to your own username
+		String password = "yourPassword"; // change to your own password
 		Connection conn;
 		
 		try {
@@ -210,11 +210,11 @@ public class IntroPage extends JFrame {
 		
 		avgtxtLabel.setBackground(new Color(245, 222, 179));
 		avgtxtLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		avgtxtLabel.setFont(new Font("º–∑¢≈È", Font.PLAIN, 20));
+		avgtxtLabel.setFont(new Font("Â§πÂèëÁ†∞", Font.PLAIN, 20));
 		avgtxtLabel.setBounds(692, 200, 200, 60);
 		
 		avgLabel.setBackground(new Color(245, 222, 179));
-		avgLabel.setFont(new Font("º–∑¢≈È", Font.BOLD, 32));
+		avgLabel.setFont(new Font("Â§πÂèëÁ†∞", Font.BOLD, 32));
 		
 		panel.setBackground(new Color(241, 220, 182));
 		panel.setBounds(0, 0, 936, 60);
@@ -223,7 +223,7 @@ public class IntroPage extends JFrame {
 		panelIntro.setBounds(0, 60, 650, 335);
 		
 		titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		titleLabel.setFont(new Font("º–∑¢≈È", Font.BOLD, 48));
+		titleLabel.setFont(new Font("Â§πÂèëÁ†∞", Font.BOLD, 48));
 		
 		bgpic.setIcon(new ImageIcon("images//intro1.png"));
 		
@@ -233,7 +233,7 @@ public class IntroPage extends JFrame {
 		textPane.setBounds(new Rectangle(0, 0, 287, 10));
 		textPane.setText("\u8A55\u8AD6\u5340");
 		textPane.setEditable(false);
-		textPane.setFont(new Font("º–∑¢≈È", Font.BOLD, 24));
+		textPane.setFont(new Font("Â§πÂèëÁ†∞", Font.BOLD, 24));
 		
 		panel_1.setBackground(new Color(253, 245, 230));
 		panel_1.setBounds(649, 107, 287, 41);
@@ -255,7 +255,7 @@ public class IntroPage extends JFrame {
 		add(commentArea);
 		commentArea.add(avgtxtLabel);
 		commentArea.add(avgLabel);
-		setTitle("§Tø˙™k©ˆ∏g§R∫‚-§∂≤–");
+		setTitle("Óó∫Á™•Áå≠Ó†áÁ´íÓó∏Ë°°-„ÅñÊÆã");
 	}
 		
 }
