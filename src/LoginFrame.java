@@ -23,16 +23,16 @@ public class LoginFrame extends JFrame {
 	private Connection conn;
 
 	public LoginFrame() {
-		setTitle("¤T¿úªk©ö¸g¤Rºâ-µn¤J");
+		setTitle("ä¸‰éŒ¢æ³•æ˜“ç¶“åœç®—-ç™»å…¥");
 		getContentPane().setBackground(new Color(241, 220, 182));
 		creatGUI();
 		creatButton();
 
-		String server = "jdbc:mysql://140.119.19.73:3315/";
+		String server = "yourServer";
 		String database = "tuegroup13"; // change to your own database
 		String url = server + database + "?useSSL=false";
-		String username = "tuegroup13"; // change to your own username
-		String password = "dvj4585"; // change to your own password
+		String username = "yourUserName"; // change to your own username
+		String password = "yourPassword"; // change to your own password
 
 		try {
 			conn = (Connection) DriverManager.getConnection(url, username, password);
@@ -46,34 +46,34 @@ public class LoginFrame extends JFrame {
 	public void creatGUI() {
 
 		uLabel = new JLabel("\u4F7F\u7528\u8005\u540D\u7A31: ");
-		uLabel.setFont(new Font("¼Ğ·¢Åé", Font.BOLD, 18));
+		uLabel.setFont(new Font("æ¨™æ¥·é«”", Font.BOLD, 18));
 		uLabel.setBounds(30, 35, 124, 30);
 		add(uLabel);
 
 		pLabel = new JLabel("\u5BC6\u78BC: ");
-		pLabel.setFont(new Font("¼Ğ·¢Åé", Font.BOLD, 18));
+		pLabel.setFont(new Font("æ¨™æ¥·é«”", Font.BOLD, 18));
 		pLabel.setBounds(90, 94, 62, 30);
 		add(pLabel);
 
 		uTextField = new JTextField();
-		uTextField.setFont(new Font("¼Ğ·¢Åé", Font.PLAIN, 20));
+		uTextField.setFont(new Font("æ¨™æ¥·é«”", Font.PLAIN, 20));
 		uTextField.setBounds(151, 35, 291, 30);
 		add(uTextField);
 
 		pTextField = new JTextField(TEXTFIELD_LENGTH);
-		pTextField.setFont(new Font("¼Ğ·¢Åé", Font.PLAIN, 20));
+		pTextField.setFont(new Font("æ¨™æ¥·é«”", Font.PLAIN, 20));
 		pTextField.setBounds(151, 94, 291, 30);
 		add(pTextField);
 
 		enrollButton = new JButton("\u8A3B\u518A");
 		enrollButton.setBackground(new Color(255, 255, 255));
-		enrollButton.setFont(new Font("¼Ğ·¢Åé", Font.BOLD, 20));
+		enrollButton.setFont(new Font("æ¨™æ¥·é«”", Font.BOLD, 20));
 		enrollButton.setBounds(125, 163, 110, 30);
 		add(enrollButton);
 
 		loginButton = new JButton("\u767B\u5165");
 		loginButton.setBackground(new Color(255, 255, 255));
-		loginButton.setFont(new Font("¼Ğ·¢Åé", Font.BOLD, 20));
+		loginButton.setFont(new Font("æ¨™æ¥·é«”", Font.BOLD, 20));
 		loginButton.setBounds(280, 163, 110, 30);
 		add(loginButton);
 
@@ -97,10 +97,10 @@ public class LoginFrame extends JFrame {
 		String passeord = pTextField.getText();
 		
 		if (name .equals("")|| passeord .equals("")) {
-			JOptionPane.showMessageDialog(loginButton, "¨Ï¥ÎªÌ¦WºÙ»P±K½X¤£¥i¬°ªÅ¥Õ", "Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(loginButton, "ä½¿ç”¨è€…åç¨±èˆ‡å¯†ç¢¼ä¸å¯ç‚ºç©ºç™½", "Error", JOptionPane.ERROR_MESSAGE);
 		}
 		if (findName(name)) {
-			JOptionPane.showMessageDialog(loginButton, "¦¹¨Ï¥ÎªÌ¤w¦s¦b", "Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(loginButton, "æ­¤ä½¿ç”¨è€…å·²å­˜åœ¨", "Error", JOptionPane.ERROR_MESSAGE);
 		} else {
 			try {
 				Statement stat;
@@ -117,7 +117,7 @@ public class LoginFrame extends JFrame {
 				query = String.format("INSERT  INTO `Comment` (ID,UserName,Password) VALUE (%s,'%s','%s') ;",n+1, name,
 						passeord);
 				stat.execute(query);
-				JOptionPane.showMessageDialog(loginButton, "µù¥U¦¨¥\", "info", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(loginButton, "è¨»å†ŠæˆåŠŸ", "info", JOptionPane.INFORMATION_MESSAGE);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -131,7 +131,7 @@ public class LoginFrame extends JFrame {
 		ArrayList<String> rPassword =new ArrayList<>();
 
 		if (name.equals("") || password.equals("")) {
-			JOptionPane.showMessageDialog(loginButton, "¨Ï¥ÎªÌ¦WºÙ©Î±K½X¤£¥i¬°ªÅ¥Õ", "Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(loginButton, "ä½¿ç”¨è€…åç¨±æˆ–å¯†ç¢¼ä¸å¯ç‚ºç©ºç™½", "Error", JOptionPane.ERROR_MESSAGE);
 			b = false;
 		} else {
 			if (findName(name)) {
@@ -151,12 +151,12 @@ public class LoginFrame extends JFrame {
 					b=true;
 				}
 				else {
-					JOptionPane.showMessageDialog(loginButton, "±K½X¿ù»~", "Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(loginButton, "å¯†ç¢¼éŒ¯èª¤", "Error", JOptionPane.ERROR_MESSAGE);
 					b = false;
 					
 				}
 			} else {
-				JOptionPane.showMessageDialog(loginButton, "¦¹¨Ï¥ÎªÌ©|¥¼µù¥U", "Error", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(loginButton, "æ­¤ä½¿ç”¨è€…å°šæœªè¨»å†Š", "Error", JOptionPane.ERROR_MESSAGE);
 				b = false;
 			}
 		}
