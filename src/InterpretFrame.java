@@ -16,13 +16,13 @@ import com.mysql.jdbc.Connection;
 public class InterpretFrame extends JFrame {
 	public InterpretFrame(String choised, String position) throws SQLException {
 
-		setTitle("¤T¿úªk©ö¸g¤Rºâ-¸Ñ¨ö");
+		setTitle("ä¸‰éŒ¢æ³•æ˜“ç¶“åœç®—-è§£å¦");
 		
-		String server = "jdbc:mysql://140.119.19.73:3315/";
+		String server = "yourServer";
 		String database = "tuegroup13"; // change to your own database
 		String url = server + database + "?useSSL=false";
-		String username = "tuegroup13"; // change to your own username
-		String password = "dvj4585"; // change to your own password
+		String username = "yourUsername"; // change to your own username
+		String password = "yourPassword"; // change to your own password
 		
 		JPanel panelGraph = new JPanel();
 		panelGraph.setBackground(new Color(255, 255, 255));
@@ -58,18 +58,18 @@ public class InterpretFrame extends JFrame {
 		GuaName.setEditable(false);
 		GuaName.setBounds(75, 205, 506, 38);
 		GuaName.setColumns(10);
-		GuaName.setFont(new Font("¼Ğ·¢Åé", Font.PLAIN, 30));
+		GuaName.setFont(new Font("æ¨™æ¥·é«”", Font.PLAIN, 30));
 		
 		JTextArea txt = new JTextArea();
 		txt.setBackground(new Color(253, 245, 230));
 		txt.setBounds(10, 246, 586, 172);
-		txt.setFont(new Font("¼Ğ·¢Åé", Font.PLAIN, 18));
+		txt.setFont(new Font("æ¨™æ¥·é«”", Font.PLAIN, 18));
 		txt.setLineWrap(true);
 		
 		JTextArea labelNum = new JTextArea();
 		labelNum.setEditable(false);
 		labelNum.setBackground(new Color(241, 220, 182));
-		labelNum.setFont(new Font("¼Ğ·¢Åé", Font.BOLD, 32));
+		labelNum.setFont(new Font("æ¨™æ¥·é«”", Font.BOLD, 32));
 		labelNum.setBounds(10, 205, 74, 38);
 		
 		
@@ -104,8 +104,8 @@ public class InterpretFrame extends JFrame {
 			query = String.format("SELECT ID,rank,Username,Comment FROM `Comment` WHERE guaID='%s';", id);
 			if (stat.execute(query)) {
 				
-				String output = "\nÃö©ó¦¹¨ö¡A¨Ï¥ÎªÌ­Ì´¿µ¹¤©ªºµû½×:\n";
-				String[] columnLable = { "µû½×½s¸¹", "µû¤À", "¨Ï¥ÎªÌ", "µû½×" };
+				String output = "\né—œæ–¼æ­¤å¦ï¼Œä½¿ç”¨è€…å€‘æ›¾çµ¦äºˆçš„è©•è«–:\n";
+				String[] columnLable = { "è©•è«–ç·¨è™Ÿ", "è©•åˆ†", "ä½¿ç”¨è€…", "è©•è«–" };
 				for (int i = 0; i < columnLable.length; i++) {
 					if(i==0) {
 						output += String.format("%1s", columnLable[i]);						
@@ -146,7 +146,7 @@ public class InterpretFrame extends JFrame {
 		JScrollPane scrollPane = new JScrollPane(txt);
 		scrollPane.setBackground(new Color(241, 220, 182));
 		scrollPane.setBounds(10, 246, 586, 172);
-		scrollPane.setFont(new Font("¼Ğ·¢Åé", Font.PLAIN, 18));
+		scrollPane.setFont(new Font("æ¨™æ¥·é«”", Font.PLAIN, 18));
 		
 //		add(panel_1);
 //		panel_1.add(scrollPane);
@@ -155,7 +155,7 @@ public class InterpretFrame extends JFrame {
 //		panel_1.add(comment);
 		add(comment);
 
-		comment.setFont(new Font("¼Ğ·¢Åé", Font.PLAIN, 18));
+		comment.setFont(new Font("æ¨™æ¥·é«”", Font.PLAIN, 18));
 		comment.setBounds(260, 440, 85, 23);
 		panelGraph.add(interpret);
 		getContentPane().add(labelNum);
